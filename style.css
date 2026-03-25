@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #e0acd3, #e0acd3);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+
+h1 {
+  margin-top: 40px;
+  font-size: 26px;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.tree {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 40px auto;
+
+  animation: heartbeat 2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* flores da árvore */
+.flower-tree {
+  position: absolute;
+}
+
+/* tronco centralizado */
+.tree::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 52%;
+  transform: translateX(-50%);
+  
+  width: 20px;
+  height: 80px;
+
+  /* cor mais natural */
+  background: linear-gradient(180deg, #8b5a2b, #5a3b1a);
+
+  /* formato retangular */
+  border-radius: 2px;
+
+  /* sombra pra dar profundidade */
+  box-shadow: 
+    inset -4px 0 6px rgba(0,0,0,0.2),
+    2px 4px 8px rgba(0,0,0,0.2);
+}
+
+/* contador */
+#contador {
+  margin-top: 60px;
+  font-size: 20px;
+    color: #555;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+
+}
+
+/* flores caindo */
+.flower-fall {
+  position: fixed;
+  top: -10px;
+  animation: fall linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+.surpresa {
+  margin-top: 20px;
+}
+
+.surpresa button {
+  background: #ffd700;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.surpresa button:hover {
+  background: #ffcc00;
+}
+
+.hidden {
+  display: none;
+  margin-top: 10px;
+  font-size: 18px;
+  color: #444;
+}
+
+
