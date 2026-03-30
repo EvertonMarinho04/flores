@@ -72,3 +72,14 @@ function mostrarMensagem() {
   const msg = document.getElementById("mensagem");
   msg.style.display = "block";
 }
+
+function entrar() {
+  const intro = document.getElementById("intro");
+
+  intro.style.opacity = "0";
+  intro.style.transition = "0.8s";
+
+  setTimeout(() => {
+    intro.style.display = "none";
+  }, 800);
+}
